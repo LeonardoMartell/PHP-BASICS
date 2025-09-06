@@ -2,6 +2,7 @@
 //Chama os arquivos que contém a lógica das operações
 require('calculadora.php');
 require('tabuada.php');
+require('primo.php');
 ?>
 
 <!-- Área da calculadora -->
@@ -35,7 +36,6 @@ if(!empty($_POST['n1']) && !empty($_POST['n2'])){
 ?>
 <hr>
 
-
 <!-- Área da tabuada -->
  <h1>Tabuada</h1>
  <form method="post">
@@ -61,3 +61,20 @@ if(!empty($_POST['n1']) && !empty($_POST['n2'])){
     <?php endforeach;?>
 </ul>
 <hr>
+
+<!-- Área de numero primo -->
+<h1>É primo</h1>
+<form method="post">
+    <input name="primo" type="text">
+    <input type="submit" value="Verificar">
+</form>
+<?php
+    if(!empty($_POST['primo'])){
+        $numPrimo = $_POST['primo'];
+        if(is_numeric($numPrimo)){
+            primo($numPrimo);
+        }else{
+            echo "<h2>O valor enviado precisa ser um numero</h2>";
+        }
+    }
+?>

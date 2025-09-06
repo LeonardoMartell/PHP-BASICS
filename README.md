@@ -8,4 +8,4 @@ Este módulo serão diversos mini-projetos cada qual feito com tecnicas diferent
 
 ## matemática
 
-Aqui eu criei uma calculadora comum com os quatros operadores básicos da matemática e uma tabuada. 
+Aqui eu criei uma calculadora comum com os quatros operadores básicos da matemática, uma tabuada e um verificador de número primo. 
