@@ -13,3 +13,7 @@ Aqui eu criei uma calculadora comum com os quatros operadores básicos da matem�
 ## Notas
 
 Mostra uma lista de alunos, suas notas e se o aluno foi aprovado. A media para aprovação é 7.
+
+## geradorSenha
+
+Clássico gerador de senha que retorna baseado na quantidade e nos tipos de carateres que o usuário escolher.
