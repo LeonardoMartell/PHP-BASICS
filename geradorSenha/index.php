@@ -34,7 +34,10 @@ if(!empty($_POST['senha'])){
     $numeros = (bool) ($_POST['numeros'] ?? false);
     $simbolos = (bool) ($_POST['simbolos'] ?? false);
 
-    $gerarSenha = gerar($tamanhoSenha, $maiusculas, $minusculas, $numeros, $simbolos);
-
-    echo "<h1>Senha: $gerarSenha</h1>";
+    try{
+        $gerarSenha = gerar($tamanhoSenha, $maiusculas, $minusculas, $numeros, $simbolos);
+        echo "<h1>Senha: $gerarSenha</h1>";
+    }catch(Exception $e){
+        echo $e->getMessage();
+    }
 }

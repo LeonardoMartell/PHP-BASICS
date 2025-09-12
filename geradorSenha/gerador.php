@@ -35,5 +35,13 @@ function gerar($tamanho, $maiusculas, $minusculas, $numeros, $simbolos){
     $string = join('', $stringSaida);
     //pega a string gerada, embaralha e depois corta para o numero de carateres que o usuário escolheu
     $stringFormatada = mb_substr(str_shuffle($string), 0, $tamanho);
-    return $stringFormatada;
+
+    if($tamanho < 8 || $tamanho > 50){
+        throw new InvalidArgumentException("A senha não pode ter menos de 8 ou mais de 50 caracteres");
+    } else if(!($maiusculas || $minusculas || $numeros || $simbolos)){
+        throw new RuntimeException("Escolha pelo menos um tipo de caratere");
+    } else{
+        return $stringFormatada;
+    }
+
 }
